@@ -1,0 +1,36 @@
+{% block content %}
+	<!DOCTYPE html>
+    
+	<head>
+		<title>Compute Compensation</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="{{ asset('/assets/styles.css') }}"/>
+
+	</head>
+	<br>
+	<br>
+	<h4 class="text-center">Transport Allowance Computation</h1>
+	<div class="container">
+
+		<br/>
+		<form id="upload_csv" name="upload_csv" method="post" enctype="multipart/form-data">
+			<div class="col-md-3">
+				<br/>
+				<label>Import CSV file and click upload.</label>
+				<input type="file" name="csv_file" id="csv_file" accept=".csv" style="margin-top:15px;"/>
+			</div>
+
+			<div style="clear:both"></div>
+		</form>
+		<div class="col-md-5">
+			<input type="submit" form="upload_csv" name="upload" id="upload" value="Upload" style="margin-top:10px;" class="btn btn-success"/>
+		</div>
+		<br/>
+		<br/>
+		<div class="table-responsive"></div>
+		<div>
+			-
+		</div>
+		<div></div>
+	</div>
+{% endblock %}

@@ -1,0 +1,16 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+# the "app_lucky_number" route name is not important yet
+
+app_lucky_number:
+    path: /lucky/number
+    controller: App\Controller\LuckyController::number
+
+app_user_notifications:
+    path: /user/notifications
+    controller: App\Controller\UserController::notifications
+
+app_import_import:
+    path: /import/import
+    controller: App\Controller\ImportController::import        

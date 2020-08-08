@@ -1,0 +1,97 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1 class="text-center">Employee Transport Allowance</h1>
+    <div class="container">
+      <div class="search-container">
+
+          {{ form_start(form) }}
+        <div class="col-sm-3">
+            {{ form_widget(form.number) }}
+        </div>
+          <div class="col-sm-3">
+          {{ form_widget(form.name) }}
+
+        </div>
+        <div class="col-sm-3">
+            {{ form_widget(form.category) }}
+        </div>
+        <div class="col-sm-3 pull-right">
+<!--        <button type="submit" class="btn btn-default" style="width: 100%"><i class="fa fa-search" ></i> Search Task</button>
+-->
+		<input type="submit" name="upload" id="upload" value="Upload" style="margin-top:10px;" class="btn btn-success" />
+
+          {{ form_end(form) }}
+          <br>
+        </div>
+      </div>
+<!--
+<table class="table table-striped" style="margin-top: 7%;">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Todo</th>
+      <th scope="col">Due Date</th>
+      <th scope="col">Category</th>
+      <th scope="col">Description</th>
+      <th scope="col"> Action </th>
+    </tr>
+  </thead>
+  
+  -->
+     <br />
+   <br />
+   <div class="table-responsive">
+    <table class="table table-striped table-bordered" id="data-table">
+     <thead>
+      <tr>
+       <th>Employee ID</th>
+       <th>Employee Name</th>
+       <th>Transport Type</th>
+       <th>Distance (km)</th>
+       <th>Workdays</th>
+       <th>**Compensation (€)</th>
+       <th>Payment Date</th>
+      </tr>
+     </thead>
+    </table>
+
+    <button onclick="exportTableToExcel('data-table', 'computed-data'+Date.now())" class="btn btn-primary">Export Table To Excel File</button>
+   </div>
+   <div>
+       -
+   </div>
+   <div>
+       <b>** Compensation = (Distance * 2) * (Base Compensation per km * {exception factor}) * (Workdays * 4)</b>
+   </div>
+  </div>
+  <!--
+  <tbody>
+
+
+  {% for todo in searches %}
+    <tr>
+      <th scope="row">{{todo.id}}</th>
+      <td>{{todo.name}}</td>
+      <td>{{todo.dueDate|date('F j, Y, g:i a')}}</td>
+      <td>{{todo.category}}</td>
+      <td>{{ todo.description }}</td>
+      <td>
+      <a href="/todo/details/{{todo.id}}" class="btn btn-success">View</a>
+      <a href="/todo/edit/{{todo.id}}" class="btn btn-default">Edit</a>
+      <a href="/todo/delete/{{todo.id}}" class="btn btn-danger">Delete</a>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+     <div class="col-sm-3 pull-right">
+      <a href="/todo/create" class="btn btn-primary" style="width: 100%">Add new Task</a>
+    </div>
+      <div class="col-sm-3 pull-right">
+        <a href="{{ url('todo_meetings') }}" class="btn btn-primary" style="width: 100%">Add new meeting</a>
+      </div>
+
+    </div>
+-->
+{% endblock %}

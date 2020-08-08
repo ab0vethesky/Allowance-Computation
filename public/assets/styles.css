@@ -1,0 +1,16 @@
+.box
+{
+    max-width:600px;
+    width:100%;
+    margin: 0 auto;
+}
+th {
+text-align: center;
+background-color: #4CAF50;
+color: white;
+}
+
+h3, label,table
+{
+    font-family: Arial, Helvetica, sans-serif;    
+}
