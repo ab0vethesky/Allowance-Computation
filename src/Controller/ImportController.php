@@ -156,7 +156,7 @@ class ImportController extends AbstractController
                 
                 TODO - refactor this block
             */
-            error_reporting(0);
+            error_reporting(0); // This is necessary to ignore php notices while parsing the csv data.
             switch ($transType) {
                 case "TRAIN":
                     $comp = $train;
