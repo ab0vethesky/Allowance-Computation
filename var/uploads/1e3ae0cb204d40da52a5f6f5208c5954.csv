@@ -1,0 +1,8 @@
+﻿employee_id,employee_name,transport_type,distance_amt,workdays_amt
+1,HEIN,BIKE,12,5
+2,FLORIAN,BUS,15,4
+3,WOBBE,BIKE,4,3
+4,DOLF,CAR,20,5
+5,IOANNIS,TRAIN,100,5
+6,BEN,BIKE,8,4
+7,HANS,CAR,150,3
